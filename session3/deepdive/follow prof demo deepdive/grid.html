@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Bootstrap - Grid - 1st Example</title>
+    <style>
+        
+        .row div{
+            border: 1px solid red;
+            /* Looks more wide with the colour */
+            padding: 10px; 
+        }
+
+    </style>
+
+  </head>
+  <body>
+    <!-- in bootstrap grid. sm 576px, md 768px, lg 992px, xl 1200px -->
+<div class="container">
+
+    <div class="row" style="background-color: yellow;">
+        <!-- 'col-sm' when device screen goes below 576px, columns will stack up: https://getbootstrap.com/docs/4.6/layout/grid/ -->
+        <!-- Combined together maximum 12 columns, each area has 4 grids -->
+        <!-- If only assign col-md-x to one, it will divide 12-x to the remaining columns. -->
+        <div class="col-md-2">
+            Area 1
+        </div>
+        <div class="col-md-2">
+            Area 2
+        </div>
+        <div class="col-md-4">
+            Area 3
+        </div>
+    </div>
+
+    <div class="row" style="background-color: pink; margin-top: 20px;">
+        <!-- When it goes over 12 per row, the remaining ones will goes to the next row -->
+        <!-- Adding another col-xx-x sets up another breakpoints -->
+        <div class="col-sm-6 col-md-3">
+            Area 1
+        </div>
+        <div class="col-sm-6 col-md-3">
+            Area 2
+        </div>
+        <div class="col-sm-6 col-md-3">
+            Area 3
+        </div>
+        <div class="col-sm-6 col-md-3">
+            Area 4
+        </div>
+    </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
