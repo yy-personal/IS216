@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Bootstrap - Jumbotron, card, nav</title>
+  </head>
+  <body>
+
+    <div class="jumbotron jumbotron-fluid bg-danger text-white text-center">
+
+        <div class="container">
+            <h1 class="display-1">Hello World</h1>
+            <p class="lead">
+                This is a fan page dedicated to stars.
+            </p>
+        </div>
+        
+    </div>
+
+    <!-- Cards  -->
+
+    <!-- Start from grid  -->
+    <div class="container">
+
+      <div class="row">
+        <!-- col-lg-3: When the screen is >992px, the card to span only 3(now 4 on lesson) grid columns -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <!-- First column here -->
+          <!-- Add a card  -->
+          <div class="card" style="width: 18rem;">
+            <img src="images/ryan.jpg" class="card-img-top" alt="Ryan Reynolds">
+            <div class="card-body">
+              <h5 class="card-title">Ryan Reynolds</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Another column here -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card" style="width: 18rem;">
+            <img src="images/ryang.jpg" class="card-img-top" alt="Ryan Gosling">
+            <div class="card-body">
+              <h5 class="card-title">Ryan Gosling</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <!-- 3rd card  -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card" style="width: 18rem;">
+            <img src="images/paul.jpg" class="card-img-top" alt="Paul Rudd">
+            <div class="card-body">
+              <h5 class="card-title">Paul Rudd</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <!-- 4th card  -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card" style="width: 18rem;">
+            <img src="images/armie.jpg" class="card-img-top" alt="Armid Hammer">
+            <div class="card-body">
+              <h5 class="card-title">Armid Hammer</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Nav  -->
+
+    <!-- The space between below and items on top, search 'spacing' in bootstrap -->
+    <h2 class="display-4 text-center my-5 border border-info">Meet the crazy Fans</h2>
+    <!-- flex-lg-row: when screen lg is horizontal, when smaller than that become flex/vertical. -->
+    <!-- data-toggle allows other name to be clickable. -->
+    <nav class="nav justify-content-center nav-pills flex-column flex-lg-row">
+        <a class="nav-link active" href="#one" data-toggle="tab">Zi Xiang</a>
+        <a class="nav-link" href="#two" data-toggle="tab">Gigi</a>
+        <a class="nav-link" href="#three" data-toggle="tab">Weng Kiat</a>
+        <a class="nav-link" href="#four" data-toggle="tab">Majulah</a>
+    </nav>
+
+    <!-- This below allows content to be expand when click on it. -->
+    <!-- The px-2 adds padding to the left and right of the div content. -->
+    <div class="tab-content px-5 pt-3">
+
+        <div class="tab-pane active" id="one">
+            <h4>Zi Xiang</h4>
+            <p>
+               1 s 1 s  x a 
+            </p>
+        </div>
+        <div class="tab-pane" id="two">
+            <h4>Gigi</h4>
+            <p>
+               2 w da  
+            </p>
+        </div>
+        <div class="tab-pane" id="three">
+            <h4>Weng Kiat</h4>
+            <p>
+               3 dasdasasd as
+            </p>
+        </div>
+        <div class="tab-pane" id="four">
+            <h4>Majulah</h4>
+            <p>
+               4 dasd as das
+            </p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
