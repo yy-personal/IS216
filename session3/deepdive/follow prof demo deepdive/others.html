@@ -11,6 +11,147 @@
     <title>Bootstrap - Other Things!</title>
   </head>
   <body>
+    <h1 class="display-1 text-center">Hellow Wurld!</h1>
+
+    <!-- Style below allows it to be centered etc -->
+    <form action="" style="width: 600px; margin: auto;">
+
+        <!-- To put, for example country and sport into the same role, remember grid. -->
+        <div class="row">
+
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" name="country" id="country" class="form-control"> 
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="sport">Sport</label>
+                    <input type="text" name="sport" id="sport" class="form-control"> 
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" class="form-control"> 
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="pet">Have pets?</label>
+            <select name="pet" id="" class="form-control">
+                <option value="y">Yes</option>
+                <option value="y">No</option>
+        </select>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" name="" id="adopt-pets" class="form-check-input">
+            <label for="adopt-pets" class="form-check-label">Adopt pets?</label>
+        </div>
+        
+        <!-- btm-lg makes the button larger. -->
+        <!-- btn-block to span the entirety of the form. -->
+        <button type="submit" class="btn btn-outline-danger btn-lg btn-block">
+            Send the Form
+        </button>
+
+    </form>
+    <hr>
+    <!-- Let's do something with list. -->
+    <h2 class="display-3 text-center">List</h1>
+    
+        <div class="container" style="width: 600px;">
+            <ul class="list-group">
+                <li class="list-group-item">Cat</li>
+                <li class="list-group-item">Dog</li>
+                <li class="list-group-item">Bird</li>
+            </ul>
+        </div>
+
+    <hr>
+    <!-- Let's do something with Table. -->
+    <h2 class="display-3 text-center">Table</h1>
+
+        <div class="container" style="width: 90%; margin-bottom: 100px;">
+            <!-- Table from template -->
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+
+        </div>
+
+    <hr>
+    <!-- Let's do something with Dropdown. -->
+    <h2 class="display-3 text-center">Dropdown</h1>
+  
+        <!-- Default dropup button -->
+        <div class="btn-group dropup" style="margin-left: 100px;">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropup
+            </button>
+            <div class="dropdown-menu">
+            <!-- Dropdown menu links -->
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </div>
+        
+        <!-- Split dropup button -->
+        <div class="btn-group dropup">
+            <button type="button" class="btn btn-secondary">
+            Split dropup
+            </button>
+            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+            <!-- Dropdown menu links -->
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </div>
+
+        <hr>
+        <div class="container" style="margin-bottom: 200px;">
+        </div>
+        
 
 
     <!-- Optional JavaScript; choose one of the two! -->
