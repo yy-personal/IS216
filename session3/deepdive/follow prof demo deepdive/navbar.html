@@ -11,7 +11,40 @@
     <title>Bootstrap - Jumbotron, card, nav, navigation bar </title>
   </head>
   <body>
+    <!-- Navigation Bar -->
+    <!-- We need a toggleable navigation bar : 'navbar-expand-md' -->
+    <nav class="navbar navbar-expand-md bg-warning navbar-light">
 
+        <!-- Has to be inside a container. -->
+        <div class="container">
+
+            <!-- Copied from sample code of 'Nav' -->
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Another Div, id='myMenu' -->
+            <div class="collapse navbar-collapse" id="myMenu">
+                <div class="navbar-nav">
+
+                    <a class="nav-item nav-link active" href="#">Home</a> 
+                    <a class="nav-item nav-link" href="#">Stars</a> 
+                    <a class="nav-item nav-link" href="#">Awards</a> 
+                    <a class="nav-item nav-link" href="#">Contact</a> 
+
+                </div>
+
+            </div>
+
+        </div>
+
+        
+
+    </nav>
+
+
+
+    <!-- Navigation Bar Ends -->
     <div class="jumbotron jumbotron-fluid bg-danger text-white text-center">
 
         <div class="container">
@@ -24,7 +57,6 @@
     </div>
 
     <!-- Cards  -->
-
     <!-- Start from grid  -->
     <div class="container">
 
