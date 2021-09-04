@@ -83,14 +83,44 @@
     <!-- The space between below and items on top, search 'spacing' in bootstrap -->
     <h2 class="display-4 text-center my-5 border border-info">Meet the crazy Fans</h2>
     <!-- flex-lg-row: when screen lg is horizontal, when smaller than that become flex/vertical. -->
+    <!-- data-toggle allows other name to be clickable. -->
     <nav class="nav justify-content-center nav-pills flex-column flex-lg-row">
-        <a class="nav-link active" href="#">Zi Xiang</a>
-        <a class="nav-link" href="#">Gigi</a>
-        <a class="nav-link" href="#">Weng Kiat</a>
-        <a class="nav-link" href="#">Majulah</a>
+        <a class="nav-link active" href="#one" data-toggle="tab">Zi Xiang</a>
+        <a class="nav-link" href="#two" data-toggle="tab">Gigi</a>
+        <a class="nav-link" href="#three" data-toggle="tab">Weng Kiat</a>
+        <a class="nav-link" href="#four" data-toggle="tab">Majulah</a>
     </nav>
 
-    
+    <!-- This below allows content to be expand when click on it. -->
+    <!-- The px-2 adds padding to the left and right of the div content. -->
+    <div class="tab-content px-5 pt-3">
+
+        <div class="tab-pane active" id="one">
+            <h4>Zi Xiang</h4>
+            <p>
+               1 s 1 s  x a 
+            </p>
+        </div>
+        <div class="tab-pane" id="two">
+            <h4>Gigi</h4>
+            <p>
+               2 w da  
+            </p>
+        </div>
+        <div class="tab-pane" id="three">
+            <h4>Weng Kiat</h4>
+            <p>
+               3 dasdasasd as
+            </p>
+        </div>
+        <div class="tab-pane" id="four">
+            <h4>Majulah</h4>
+            <p>
+               4 dasd as das
+            </p>
+        </div>
+
+    </div>
 
 
 
