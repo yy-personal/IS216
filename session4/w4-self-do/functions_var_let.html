@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Functions - var versus let</title>
+
+    <script>
+        var outside_greet = "Outside";
+
+        function kungpao() {
+            var kungpao_greet = "Kung Pao Chicken!";
+
+            console.log('[INSIDE kungpao()]:'+kungpao_greet);
+
+            console.log('[Outside kungpao()]:'+outside_greet);
+        }
+
+        kungpao();
+        console.log('[OUTSIDE]:'+outside_greet);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
