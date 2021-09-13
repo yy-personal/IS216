@@ -29,6 +29,29 @@
         */
 
         // WRITE YOUR CODE HERE
+        let user_answer = prompt("Enter your number from 1-10 inclusive");
+        user_answer = Number(user_answer);
+
+        if (user_answer<0 || user_answer>10){
+
+            alert("Hello Hello Invalid Input!");
+
+        }
+        else{
+            let lucky_number = Math.floor(Math.random() * 11);
+            console.log(lucky_number);
+            if(user_answer==lucky_number){
+            alert("Lucky number is "+lucky_number+"! Have a nice day!");
+            }
+            else{
+                alert("Lucky number is "+lucky_number+"! Ouch... try again next time!");
+            }
+        }
+        
+
+
+
+        
 
     </script>
 

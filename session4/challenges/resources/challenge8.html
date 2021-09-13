@@ -57,7 +57,55 @@
         //          Else no need to apply any styling
         //
         // HINT: Re-use your Challenge 7 code
-        
+        // for(friend of friends){
+        //     // console.log(friend[1]);
+
+        //     table_data = table_data + "<tr>";
+        //     for(friend_info of friend){
+        //         if (friend_info == "Female"){
+        //             table_data = table_data + "<td class='female'>" + friend_info + "</td>"
+        //         }
+        //         else if (friend_info == "Male"){
+        //             table_data = table_data + "<td class='male'>" + friend_info + "</td>"
+        //         }
+        //         else if (friend_info>50000){
+        //             table_data = table_data + "<td class='rich'>" + friend_info + "</td>"
+        //         }
+        //         else{
+        //             table_data = table_data + "<td>" + friend_info + "</td>"
+        //         }
+        //         // console.log(friend_info[2]);
+        //     }
+            
+        //     table_data = table_data + "</tr>";
+        // }
+
+        for(friend of friends){
+
+            table_data = table_data + "<tr>";
+
+            let counter = 0;
+
+            for(friend_info of friend){
+                // console.log(friend_info);
+                if(counter == 1 && friend_info == "Female"){
+                    table_data = table_data + "<td class='female'>" + friend_info + "</td>"
+                }
+                else if(counter == 1 && friend_info == "Male"){
+                    table_data = table_data + "<td class='male'>" + friend_info + "</td>"
+                }
+                else if(counter == 3 && friend_info > 50000){
+                    table_data = table_data + "<td class='rich'>" + friend_info + "</td>"
+                }
+                else{
+                    table_data = table_data + "<td>" + friend_info + "</td>"
+                }
+                counter++;
+                // console.log(counter);
+            }
+            
+            table_data = table_data + "</tr>";
+        }
 
         // Once table_data is completed
         // It will be used by JavaScript code below (inside body)

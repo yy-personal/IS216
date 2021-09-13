@@ -22,20 +22,33 @@
         var table_data = " \
             <table border='1' style='text-align: center'> \
                 <tr> \
-                    <th>Name</th> \
+                    <th>Name</th>\
                     <th>Gender</th> \
                     <th>Job</th> \
                     <th>Annual Salary (USD)</th> \
                 </tr> \
         ";
-
+                // <tr> \
+                //     <td>Rachel Green</td>\
+                //     <td>Female</td> \
+                //     <td>Marktdeting Executive</td> \
+                //     <td>50000</td> \
+                // </tr> \
         // Loop through friends Array and populate table_data
         // with 6 Friends cast members' data
         // - 1 row for 1 cast member
         // HINT: You need to APPEND additional HTML to table_data
         
         // WRITE YOUR CODE HERE
+        for(friend of friends){
+            table_data = table_data + "<tr>";
 
+            for(friend_info of friend){
+                table_data = table_data + "<td>" + friend_info + "</td>"
+            }
+
+            table_data = table_data + "</tr>";
+        }
 
 
         // Once table_data is completed
@@ -56,5 +69,6 @@
     </script>
     <!-- Do NOT modify the above JavaScript -->
     
+
 </body>
 </html>

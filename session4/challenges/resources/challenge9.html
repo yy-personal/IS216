@@ -20,7 +20,39 @@
         function convert_first_letter(str) {
             
             // YOUR CODE GOES HERE
-            
+            // let arr = str.split(" ");
+            // // console.log(arr);
+            // let empty_str = "";
+            // for(word of arr) {
+            //     counter = 0;
+            //     // console.log(word);
+            //     for(letter of word) {
+            //         // console.log(letter);
+            //         if (counter == 0){
+            //             empty_str+=letter.toUpperCase();
+            //         }
+            //         else{
+            //             empty_str+=letter;
+            //         }
+            //         counter ++;
+            //     }
+            //     empty_str+=" ";
+            // }
+            // return empty_str;
+            let arr = str.split(" ");
+            let new_arr = [];
+
+            // console.log(arr); //(4) ['the', 'very', 'cute', 'puppy']
+
+            for(let i = 0 ; i < arr.length ; i++){
+                // console.log(i); 
+                let capital = arr[i][0].toUpperCase();
+
+                new_arr.push(arr[i][0].toUpperCase()+arr[i].slice(1));
+            }
+                
+            let new_str = new_arr.join(" ");    
+            return new_str;
         }
 
         
