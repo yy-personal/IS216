@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/challenge14.css">
+
+    <!-- Custom JavaScript -->
+    <script src="js/challenge14.js"></script>
+
+    <title>Challenge 14</title>
+</head>
+<body onload="display_default()">
+
+    <!-- ================================================================ -->
+    <!-- Top Heading -->
+    <div class="container-fluid" style="background-color: #ecebeb; padding-top: 50px; padding-bottom: 50px; margin-bottom: 30px;">
+        <div class="container">
+            <h1 class="display-4">Krazy MLBB</h1>
+            <h3>Hero Guide V1.0</h3>
+        </div>
+    </div>
+
+
+    <!-- Buttons -->
+    <div class="container">
+        <div class="row justify-content-center" style="margin: auto; margin-top: 10px; margin-bottom: 20px;">
+            <div class="col text-center">
+
+                <button type="button" class="btn btn-primary" onClick="show_heroes('tank')">
+                    Tank
+                </button>
+
+                <button type="button" class="btn btn-secondary" onClick="show_heroes('fighter')">
+                    Fighter
+                </button>
+
+                <button type="button" class="btn btn-danger" onClick="show_heroes('mage')">
+                    Mage
+                </button>
+
+                <button type="button" class="btn btn-warning" onClick="show_heroes('assassin')">
+                    Assassin
+                </button>
+
+                <button type="button" class="btn btn-info" onClick="show_heroes('marksman')">
+                    Marksman
+                </button>
+
+                <button type="button" class="btn btn-success" onClick="show_heroes('support')">
+                    Support
+                </button>
+
+                <button type="button" class="btn btn-dark" onClick="show_heroes('all')">
+                    All
+                </button>
+
+            </div>
+
+        </div>
+    </div> <!-- End of container div -->
+
+
+
+    <!-- Heroes -->
+    <div class="container-fluid">
+
+        <div id="hero_cards" class="container">
+
+            
+            <div class="card mb-3 mx-auto">
+                <div class="row no-gutters">
+                    <div class="col-md-3">
+                        <img src="images/akai.jpg" class="card-img" width="100%" alt="Akai">
+                    </div>
+                    <div class="col-md-9">
+                        <!-- Hero -->
+                        <div class="card-body">
+                            <h5 class="card-title">Akai</h5>
+
+                            <p class="card-text">A clumsy panda from a far away Eastern village dreamt every night of becoming a mighty warrior. Akai was fat and clumsy even for panda standards and most people said that all he's good for was rolling round. Howeverthis never fazed Akaias he trained dailyhoping to one day achieve his dreams of becoming a respected warrior. His friends mocked himhis parents discouraged him but Akai persisted. Soon one daya mysterious old monk noticed Akai's persistence and took him under his guidance. Akai flourished under the training of the monkmastering the arts of the flail. He is now ready to get onto the world stage and prove that he is a worthy member of the martial arts world!</p>
+                            
+                            <p class="text-center">
+                                <button type="button" class="btn mb-1" style="background-color:#ff7002; color: white; width: 220px">
+                                    Battlepoint Cost <span class="badge bg-light text-dark">32000</span>
+                                </button>
+
+                                <button type="button" class="btn mb-1" style="background-color:#1326ff; color: white; width: 220px">
+                                    Diamond Cost <span class="badge bg-light text-dark">599</span>
+                                </button>
+
+                                <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
+                                    Movement Speed <span class="badge bg-light text-dark">260</span>
+                                </button>
+
+                                <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
+                                    Physical Attack <span class="badge bg-light text-dark">115</span>
+                                </button>
+
+                                <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
+                                    Physical Defense <span class="badge bg-light text-dark">24</span>
+                                </button>
+
+                                <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
+                                    Magic Power <span class="badge bg-light text-dark">0</span>
+                                </button>
+
+                                <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
+                                    Armor <span class="badge bg-light text-dark">24</span>
+                                </button>
+
+                                <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
+                                    Magic Resistance <span class="badge bg-light text-dark">10</span>
+                                </button>
+
+                                <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
+                                    HP <span class="badge bg-light text-dark">2769</span>
+                                </button>
+
+                                <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
+                                    Mana <span class="badge bg-light text-dark">422</span>
+                                </button>
+
+                                <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
+                                    Attack Speed <span class="badge bg-light text-dark">0.85</span>
+                                </button>
+
+                                <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
+                                    HP Regen Rate <span class="badge bg-light text-dark">42</span>
+                                </button>
+
+                                <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
+                                    Mana Regen Rate <span class="badge bg-light text-dark">12</span>
+                                </button>
+
+                                <button type="button" class="btn mb-1" style="background-color:#3e3b3a; color: white; width: 220px">
+                                    Class <span class="badge bg-light text-dark">Fighter</span>
+                                </button>
+
+                            </p>
+                        </div> <!-- end of card-body -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of card (one hero) -->
+
+
+        </div> <!-- end of container -->      
+
+    </div> <!-- end of outer container -->
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+</body>
+</html>
