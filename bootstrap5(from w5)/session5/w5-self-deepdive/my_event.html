@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript (Part 2) - Event Handling</title>
+</head>
+<!-- Step 2
+     - Web browser will execute onLoad script
+-->
+<body>
+    <!-- <body onLoad="foo()"> -->
+    
+    <!-- <img src="images/kim.png" onClick="foo()">
+
+    <p id="message">
+
+    </p>
+    
+
+    <script>
+
+        function foo() {
+            let message = prompt("Enter a greeting message");
+            
+            document.getElementById('message').innerText = message;
+            // console.log(message);
+        }
+
+    </script> -->
+
+    <!-- <div onMouseOver="mOver(this)" onMouseOut="mOut(this)">
+        Mouse Over Me
+    </div>
+
+    <script>
+
+        function mOver(obj){
+                obj.innerHTML = "Hello Justin";
+        }
+
+        function mOut(obj){
+                obj.innerHTML = "Comeback Justin";
+        }
+
+
+    </script> -->
+
+    <!-- <h1>
+        Hello World!
+    </h1>
+
+    <div>
+        Ha ha ho ho
+    </div>
+
+    <p>
+        Some paragraph
+    </p>
+
+    <img src="images/dwayne.jpg" alt="">
+
+    <script>
+
+        function foo(){
+            alert('Hello Oppa');
+        }
+
+    </script> -->
+
+    <form name="some_form">
+        Enter your country:
+        <input type="text" name="country">
+
+        <br>
+        Enter your name:
+        <input type="text" name="name" onFocus="kungfu(this)">
+
+    </form>
+
+    <script>
+
+        function kungfu(obj) {
+            obj.style.background = "yellow"
+        }
+
+    </script>
+
+</body>
+</html>
