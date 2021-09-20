@@ -100,20 +100,91 @@ function display_reviews() {
     // e.g. What about the hotel's name?
     let hotel_count = 0;
     let hotel_button_div = document.getElementById('hotel_button_div');
-    let hotel_div_str = ""
+    let hotel_div_str = "";
+    let hotel_info_div_str = "";
 
     for(hotels_data of Object.entries(reviews)){
         let hotel_name = hotels_data[0];
-        console.log(hotel_name);
+        let hotel_address = hotels_data[1][0];
+        let hotel_phone_no = hotels_data[1][1];
+        let hotel_rank = hotels_data[1][2];
+        let hotel_image_href = hotels_data[1][3];
+        let hotel_reviews = hotels_data[1][4]; //Object to convert lateR?
+
+        
+        // console.log(hotels_data);
+        // console.log(hotel_name);
         hotel_count++;
-        console.log(hotel_count);
+        // console.log(hotel_count);
         hotel_div_str += `
         <button style="margin-bottom: 5px; width:200px" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#hotel${hotel_count}">
         ${hotel_name}
-        </button>
-        <br>`;
+        </button>`;
+        // hotel_info_div_str+= `
+        // `;
+        let show = '';
+        if(hotel_count==1){
+            show = 'show'
+        }
+
+
+        hotel_info_div_str += `
+        <!-- Hotel ${hotel_count} -->
+            <div class="collapse ${show}" id="hotel${hotel_count}">
+                <div class="card card-body">
+                    <div class="container-fluid">
+                        <h2 style="font-weight: bold">${hotel_name}</h2>
+                        <ul class="list-unstyled">
+                            <li>
+                                <img src="images/${hotel_image_href}">
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marked-alt"></i>
+                                ${hotel_address}
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                ${hotel_phone_no}
+                            </li>
+                            <li>
+                                <i class="fas fa-star"></i>
+                                ${hotel_rank}
+                            </li>
+                        </ul>
+                    </div>
+
+                    <hr class="my-3">
+                    `;
+
+        let hotel_reviews_str =`
+        <div class="container-fluid">
+        `;
+        for(each_review of Object.entries(hotel_reviews)){
+            // console.log(each_review[0]);
+            // console.log(each_review[1]);
+            hotel_reviews_str +=
+                    `
+                        <blockquote class="blockquote">
+                            <p class="mb-0">${each_review[1]}</p>
+                            <footer class="blockquote-footer">
+                                <cite>${each_review[0]}</cite>
+                            </footer>
+                        </blockquote>
+        `;
+        }
+        hotel_info_div_str += hotel_reviews_str;
+        hotel_info_div_str +=
+            `
+                        </div>
+                    </div>
+                </div> 
+            `;
     }
     hotel_button_div.innerHTML = hotel_div_str;
+    
+    // console.log(hotel_info_div_str);
+    hotel_info_div.innerHTML = hotel_info_div_str;
+  
 
    
 
@@ -136,64 +207,6 @@ function display_reviews() {
     // e.g. Also note that each hotel has 5 customer reviews.
     //      Think about how you'd construct a String... 
     //      containing all 5 reviews (review comment & reviewer's name)
-    hotel_info_div.innerHTML = `
-            <!-- Hotel 1 -->
-            <div class="collapse show" id="hotel1">
-                <div class="card card-body">
-                    <div class="container-fluid">
-                        <h2 style="font-weight: bold">Hotel Name Goes Here - Hotel 1</h2>
-                        <ul class="list-unstyled">
-                            <li>
-                                <img src="images/sm_hotel_placeholder.jpg">
-                            </li>
-                            <li>
-                                <i class="fas fa-map-marked-alt"></i>
-                                123 Simpson Avenue, New York City, NY 10014-1234, USA
-                            </li>
-                            <li>
-                                <i class="fas fa-phone"></i>
-                                +1 212-555-1234
-                            </li>
-                            <li>
-                                <i class="fas fa-star"></i>
-                                Ranked #100 of 700 Hotels in New York City
-                            </li>
-                        </ul>
-                    </div>
-
-                    <hr class="my-3">
-
-                    <div class="container-fluid">
-                        <blockquote class="blockquote">
-                            <p class="mb-0">The review comments goes here.</p>
-                            <footer class="blockquote-footer">
-                                <cite>Homer Simpson</cite>
-                            </footer>
-                        </blockquote>
-
-                        <blockquote class="blockquote">
-                            <p class="mb-0">The review comments goes here.</p>
-                            <footer class="blockquote-footer">
-                                <cite>Lisa Simpson</cite>
-                            </footer>
-                        </blockquote>
-
-                        <blockquote class="blockquote">
-                            <p class="mb-0">The review comments goes here.</p>
-                            <footer class="blockquote-footer">
-                                <cite>Bart Simpson</cite>
-                            </footer>
-                        </blockquote>
-                    </div> <!-- End of Quotes -->
-                </div> <!-- End of Card Body -->
-            </div> <!-- End of Collapse -->
-
-            <!-- Hotel 2 -->
-            <div class="collapse" id="hotel2" aria-labelledby="hotel2">
-                <div class="card card-body">
-                    Hotel 2 info goes here...
-                </div>
-            </div>
-    `;
+    
 
 }
