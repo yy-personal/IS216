@@ -98,17 +98,24 @@ function display_reviews() {
     // e.g. How about id attribute?
     //      Is this button's id... used by another code later on (see below - collapse div).
     // e.g. What about the hotel's name?
-    var hotel_button_div = document.getElementById('hotel_button_div');
-    console.log(hotel_button_div);
-    hotel_button_div.innerHTML = `
-            <button style="margin-bottom: 5px" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#hotel1">
-                Hotel name placeholder 1
-            </button>
+    let hotel_count = 0;
+    let hotel_button_div = document.getElementById('hotel_button_div');
+    let hotel_div_str = ""
 
-            <button style="margin-bottom: 5px" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#hotel2">
-                Hotel name placeholder 2
-            </button>
-    `;
+    for(hotels_data of Object.entries(reviews)){
+        let hotel_name = hotels_data[0];
+        console.log(hotel_name);
+        hotel_count++;
+        console.log(hotel_count);
+        hotel_div_str += `
+        <button style="margin-bottom: 5px; width:200px" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#hotel${hotel_count}">
+        ${hotel_name}
+        </button>
+        <br>`;
+    }
+    hotel_button_div.innerHTML = hotel_div_str;
+
+   
 
 
     // [IMPORTANT]
@@ -129,8 +136,6 @@ function display_reviews() {
     // e.g. Also note that each hotel has 5 customer reviews.
     //      Think about how you'd construct a String... 
     //      containing all 5 reviews (review comment & reviewer's name)
-    var hotel_button_div = document.getElementById('hotel_info_div');
-    console.log(hotel_info_div);
     hotel_info_div.innerHTML = `
             <!-- Hotel 1 -->
             <div class="collapse show" id="hotel1">
