@@ -45,7 +45,45 @@ const stars_dataset = [
 function display_default() {
 
     // YOUR CODE GOES HERE
+    let random_num = Math.floor(Math.random() * 2);
+    // console.log(random_num);
 
+    let gender_list = stars_dataset[random_num];
+    // console.log(gender_list);
+
+    gender_list = Object.entries(gender_list);
+    let count = 0;
+
+    for(person of gender_list){
+        console.log(person);
+        let new_website_link = person[1][2];
+        // console.log(website);
+        count++;
+        let name = person[0];
+        
+        let wiki_id = 'wiki' + count;
+        // console.log(wiki_id);
+
+        // New website link at navbar here
+        let node = document.getElementById(wiki_id);
+        node.innerText = name;
+        // console.log(node.innerText);
+        node.setAttribute('href',new_website_link);
+
+        // Get image_id
+        let image_id = 'image' + count;
+        // console.log(person[1][0]);
+        // New carousell items here.
+        let new_image_link = "images/" + person[1][0]; 
+        document.getElementById(image_id).setAttribute("src", new_image_link); 
+
+        let heading_id = "slide_heading"+count;
+        document.getElementById(heading_id).innerText=name
+        
+        let quote = person[1][1];
+        let slide_title = "slide_title"+count;
+        document.getElementById(slide_title).innerText=quote
+    }
     // Look for "[IMPORTANT]" inside challenge10.html file.
     // It tells you what elements need to be updated by JavaScript functions.
 
@@ -67,7 +105,44 @@ function display_default() {
 function show_male_stars() {
 
     // YOUR CODE GOES HERE
+    let gender_list = stars_dataset[0];
+    // console.log(gender_list);
 
+    gender_list = Object.entries(gender_list);
+    let count = 0;
+
+    for(person of gender_list){
+        console.log(person);
+        let new_website_link = person[1][2];
+        // console.log(website);
+        count++;
+        let name = person[0];
+        
+        let wiki_id = 'wiki' + count;
+        // console.log(wiki_id);
+
+        // New website link at navbar here
+        let node = document.getElementById(wiki_id);
+        node.innerText = name;
+        // console.log(node.innerText);
+        node.setAttribute('href',new_website_link);
+
+        // Get image_id
+        let image_id = 'image' + count;
+        // console.log(person[1][0]);
+        // New carousell items here.
+        let new_image_link = "images/" + person[1][0]; 
+        document.getElementById(image_id).setAttribute("src", new_image_link); 
+
+        let heading_id = "slide_heading"+count;
+        document.getElementById(heading_id).innerText=name
+        
+        let quote = person[1][1];
+        let slide_title = "slide_title"+count;
+        document.getElementById(slide_title).innerText=quote
+    }
+    document.getElementById("male_button").disabled = true;
+    document.getElementById("female_button").disabled = false;
 }
 
 
@@ -76,5 +151,42 @@ function show_male_stars() {
 function show_female_stars() {
 
     // YOUR CODE GOES HERE
+    let gender_list = stars_dataset[1];
+    // console.log(gender_list);
 
+    gender_list = Object.entries(gender_list);
+    let count = 0;
+
+    for(person of gender_list){
+        console.log(person);
+        let new_website_link = person[1][2];
+        // console.log(website);
+        count++;
+        let name = person[0];
+        
+        let wiki_id = 'wiki' + count;
+        // console.log(wiki_id);
+
+        // New website link at navbar here
+        let node = document.getElementById(wiki_id);
+        node.innerText = name;
+        // console.log(node.innerText);
+        node.setAttribute('href',new_website_link);
+
+        // Get image_id
+        let image_id = 'image' + count;
+        // console.log(person[1][0]);
+        // New carousell items here.
+        let new_image_link = "images/" + person[1][0]; 
+        document.getElementById(image_id).setAttribute("src", new_image_link); 
+
+        let heading_id = "slide_heading"+count;
+        document.getElementById(heading_id).innerText=name
+        
+        let quote = person[1][1];
+        let slide_title = "slide_title"+count;
+        document.getElementById(slide_title).innerText=quote
+    }
+    document.getElementById("male_button").disabled = false;
+    document.getElementById("female_button").disabled = true;
 }
