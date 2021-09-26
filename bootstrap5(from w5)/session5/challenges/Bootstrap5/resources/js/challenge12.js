@@ -9,6 +9,9 @@
 function highlight_words() {
 
     // YOUR CODE GOES HERE
+
+    let everything = document.getElementById('book_chapter');
+    
 }
 
 
