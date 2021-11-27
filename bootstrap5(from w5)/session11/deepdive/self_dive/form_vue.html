@@ -38,9 +38,9 @@
         <br><br>
 
         You have experience taking care of:<br>
-        <input type="checkbox" v-model="animals" value="cat"> Cat
-        <input type="checkbox" v-model="animals" value="dog"> Dog
-        <input type="checkbox" v-model="animals" value="goat"> Goat
+        <input type="checkbox" v-model="animals" name="animals[]" value="cat"> Cat
+        <input type="checkbox" v-model="animals" name="animals[]" value="dog"> Dog
+        <input type="checkbox" v-model="animals" name="animals[]" value="goat"> Goat
         <br><br>
 
         Your desired help area:
@@ -66,7 +66,7 @@
 
             <ul>
                 <li v-for="animal in animals">
-                    {{ animal | make_sound() }}
+                    {{ animal | make_sound }}
                 </li>
             </ul>
         </p>
@@ -81,62 +81,12 @@
 
         <!-- Hide this h1 if fullname's length is 0 -->
         <h1 v-show=" fullname.length > 0 ">
-            <b>{{ message() }} </b>
+            <b>{{ message }} </b>
         </h1>
 
     </div>
 
-    <script>
-
-        var app = new Vue({
-            el: '#adoption',
-            data: {
-                fullname: '',
-                gender: 'female',
-                animals: [],
-                help_area: 'admin'
-            },
-            methods: {
-                get_prefix: function() {
-                    let prefix = ''
-                    if( this.gender == 'male' )
-                        prefix = "Mr."
-                    else if( this.gender == 'female' )
-                        prefix = "Ms."
-                    return prefix
-                },
-                get_image_file: function() {
-                    return "img/" + this.help_area + ".png"
-                },
-                display_bottom_h1: function() {
-                    if( this.fullname.length > 0 )
-                        return true
-                    return false
-                    
-                },
-                
-                message: function() {
-                    return "Thank you so much, " + this.fullname
-                }
-            },
-            filters: {
-                make_sound: function(animal){
-                    if( animal == 'cat' )
-                        return animal + " : " + "Meow~~~"
-                    else if( animal == 'dog' )
-                        return animal + " : " + "Woof~~~"
-                    else if( animal == 'goat' )
-                        return animal + " : " + "Meh~~~"
-                    else
-                        return "Dunno"
-                },
-            },
-            computed: {
-                
-            }
-        })
-
-    </script>
+    <script src="form_vue.js"></script>
 
 </body>
 </html>
